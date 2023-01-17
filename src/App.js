@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Navbar from "../src/Components/Navbar/Navbar";
+import ContactUs from "../src/Components/Contact us/CoontactUs";
+import BigCircle from "./Components/YchooseNeartax/BigCircle";
+
+import HowWark from "./Components/Content/HowWork";
+import OurCoreValue from "./Components/Content/OurCoreValue";
+import Contact from "./Components/Content/Contact";
+import Client from "./Components/Client/Client";
+import About from "./Components/About/About";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+          <Route path="contactUs" element={<ContactUs />} />
+          <Route path="aboutUs" element={<About />} />
+
+        </Routes>
+      <BigCircle />
+      <HowWark />
+      <OurCoreValue />
+      <Contact />
+      <Client /> 
+      
+      </BrowserRouter>
     </div>
   );
 }
