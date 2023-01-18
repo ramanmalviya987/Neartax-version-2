@@ -1,5 +1,3 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,7 +12,9 @@ module.exports = {
      colors:{
       //  headingColor: '#041D49',
        headingColor: '#1A0000',
-       'text-primary': '#89C4E1'
+       'text-primary': '#89C4E1',
+       'active': '#89C4E1'
+
      },
      backgroundColor:{
         'background-primay' : '#BFEAF5'
